@@ -1,48 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LA TIENDITA</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div >
-            <img class="logo" src="imagenes/logo.png" alt="LogoDeLaTienda">
-        </div>
-        <nav>
-            <form class="formu" action="">
-                <input type="search" name="" id="">
-                <button type="submit">Buscar</button>
-            </form>
-            <ul>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">Mini Market</a>
+            </div>
+            <ul class="nav-links">
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
+                <li class="dropdown">
+                    <a href="#">Productos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Chocolates y Caramelos</a></li>
+                        <li><a href="#">Bebidas</a></li>
+                        <li><a href="#">Material Escolar/Escritorio</a></li>
+                        <li><a href="#">Aseo Personal</a></li>
+                        <li><a href="#">Limpieza del Hogar</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Contacto</a></li>
-                <li><a href="#">Iniciar Sesion</a></li>
-                <li><a href="#">Carrito</a></li>
+                <li><a href="#">Iniciar Sesión</a></li>
             </ul>
-            
+            <div class="search-cart">
+                <form class="search-bar" action="#">
+                    <input type="search" placeholder="Buscar producto...">
+                    <button type="submit">Buscar</button>
+                </form>
+                <a href="#" class="cart-icon">🛒 Carrito</a>
+            </div>
         </nav>
     </header>
+
+    <!-- Slider -->
     <section class="slider">
-            <ul>
-                <li><img src="imagenes/img1.jpg" alt="#"></li>
-                <li><img src="imagenes/img2.jpg" alt="#"></li>
-                <li><img src="imagenes/img3.jpg" alt="#"></li>
-                <li><img src="imagenes/img4.jpg" alt="#"></li>
-                <li><img src="imagenes/img5.jpg" alt="#"></li>
-                <li><img src="imagenes/img6.jpg" alt="#"></li>
-            </ul>
+        <ul>
+            <li><img src="img/img1.jpg" alt="Imagen 1"></li>
+            <li><img src="img/img2.jpg" alt="Imagen 2"></li>
+            <li><img src="img/img3.jpg" alt="Imagen 3"></li>
+            <li><img src="img/img4.jpg" alt="Imagen 4"></li>
+            <li><img src="img/img5.jpg" alt="Imagen 5"></li>
+            <li><img src="img/img6.jpg" alt="Imagen 6"></li>
+        </ul>
     </section>
 
+    <!-- Productos -->
+    <section class="productos">
+        <h2>Nuestros Productos</h2>
+        <!-- Aquí irían los productos -->
+    </section>
 
-    
-    <footer>
+    <!-- Footer -->
+    <footer class="text-center mt-4">
         <p>&copy; 2024 La Tiendita. Todos los derechos reservados.</p>
-        <div class="redes-sociales">
-            <a href="#">Facebook</a>
+        <div class="redes-iconos">
+            <a href="#">Facebook</a> |
             <a href="#">Instagram</a>
         </div>
     </footer>
+
+    <script src="js/proy.js"></script>
 </body>
 </html>

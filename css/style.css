@@ -1,0 +1,179 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    background-color: #FFFFFF; /* Fondo blanco limpio */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333; /* Negro mate */
+    padding: 15px;
+    color: white;
+}
+
+.navbar .logo a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links li a:hover {
+    color: rgb(215, 38, 0.7); /* Rojo rubí */
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    color: #333333;
+    padding: 10px 15px;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgb(215, 38, 0.7); /* Rojo rubí */
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.search-cart {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    background-color: #E09F3E; /* Dorado suave */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #D72638; /* Rojo rubí */
+}
+
+.cart-icon {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.cart-icon:hover {
+    color: #D72638; /* Rojo rubí */
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 20px auto ;
+}
+
+.slider ul {
+    display: flex;
+    width: 600%;
+    animation: slide 40s infinite;
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@keyframes slide {
+    0% { margin-left: 0; }
+    16.66% { margin-left: -100%; }
+    33.33% { margin-left: -200%; }
+    50% { margin-left: -300%; }
+    66.66% { margin-left: -400%; }
+    83.33% { margin-left: -500%; }
+    100% { margin-left: -600%; }
+}
+
+/* Footer */
+footer {
+    background-color: #333333; /* Negro mate */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.redes-iconos a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.redes-iconos a:hover {
+    color: #D72638; /* Rojo rubí */
+}
+
+@media screen and (max-width: 700px) {
+    .navbar, .nav-links, .search-cart {
+        flex-direction: column;
+    }
+}
